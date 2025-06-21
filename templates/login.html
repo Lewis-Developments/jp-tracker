@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="content">
+    <h1>Login</h1>
+    {% if error %}
+      <p style="color: #c00;">{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+      <label>Passcode:</label><br>
+      <input type="password" name="passcode" required><br><br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+  <footer>
+    <p>&copy 2025 - LDigital Developments</p>
+  </footer>
+</body>
+</html>

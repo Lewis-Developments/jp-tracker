@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head><title>Rehearse</title></head>
+<head>
+  <title>This Week's Line</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
 <body>
-  <h1>This Week’s Line</h1>
-  {% if line %}
-    <p><strong>Japanese:</strong> {{ line.japanese }}</p>
-    <p><strong>Romaji:</strong> {{ line.romaji }}</p>
-    <p><strong>Translation:</strong> {{ line.translation }}</p>
-    <a href="/next">Mark as Learned</a>
-  {% else %}
-    <p>No current line! <a href="/add">Add one here</a>.</p>
-  {% endif %}
-  <hr>
-  <a href="/add">➕ Add New Line</a> | <a href="/history">📜 View History</a>
+  <div class="content">
+    <h1>Weekly Rehearsal Line</h1>
+    {% if line %}
+      <p><strong>Artist:</strong> {{ line.artist }}</p>
+      <p><strong>Song:</strong> {{ line.song }}</p>
+      <p><strong>Japanese:</strong> {{ line.japanese }}</p>
+      <p><strong>Romaji:</strong> {{ line.romaji or 'N/A' }}</p>
+      <p><strong>Translation:</strong> {{ line.translation }}</p>
+      <a href="/next">✔️ Mark as Learned</a>
+    {% else %}
+      <p>No current line! <a href="/add">Add one here</a>.</p>
+    {% endif %}
+    <hr>
+    <a href="/add">➕ Add New Line</a> | <a href="/history">📜 History</a>
+  </div>
+  <footer>
+    <p>&copy 2025 - LDigital Developments</p>
+  </footer>
 </body>
 </html>

@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head><title>History</title></head>
+<head>
+  <title>Line History</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
 <body>
-  <h1>Past Learned Lines</h1>
-  <ul>
-  {% for line in lines %}
-    <li>
-      {{ line.japanese }} ({{ line.romaji or 'No romaji' }}) – {{ line.translation }}
-    </li>
-  {% endfor %}
-  </ul>
-  <a href="/">Back</a>
+  <div class="content">
+    <h1>Review History</h1>
+    <ul>
+    {% for line in lines %}
+      <li>
+        <strong>{{ line.artist }} – {{ line.song }}</strong><br>
+        「{{ line.japanese }}」 ({{ line.romaji or 'N/A' }}) → {{ line.translation }}
+      </li>
+    {% endfor %}
+    </ul>
+    <a href="/">Back</a>
+  </div>
+  <footer>
+    <p>&copy 2025 - LDigital Developments</p>
+  </footer>
 </body>
 </html>

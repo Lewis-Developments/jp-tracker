@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head><title>Add Line</title></head>
+<head>
+  <title>Add Line</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
 <body>
-  <h1>Add a Song Line</h1>
-  <form method="POST">
-    <label>Japanese:</label><br>
-    <input name="japanese" required><br><br>
-    <label>Romaji (optional):</label><br>
-    <input name="romaji"><br><br>
-    <label>English Translation:</label><br>
-    <input name="translation" required><br><br>
-    <input type="submit" value="Save">
-  </form>
+  <div class="content">
+    <h1>Add a New Song Line</h1>
+    <form method="POST">
+      <label>Japanese:</label><br>
+      <input name="japanese" required><br><br>
+      <label>Romaji (optional):</label><br>
+      <input name="romaji"><br><br>
+      <label>English Translation:</label><br>
+      <input name="translation" required><br><br>
+      <label>Artist:</label><br>
+      <input name="artist" required><br><br>
+      <label>Song Title:</label><br>
+      <input name="song" required><br><br>
+      <input type="submit" value="Save">
+    </form>
+    <a href="/">Back</a>
+  </div>
+  <footer>
+    <p>&copy 2025 - LDigital Developments</p>
+  </footer>
 </body>
 </html>

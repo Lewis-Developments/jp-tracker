@@ -1,0 +1,108 @@
+/* Simple, modern, and animated style for JP Tracker */
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #22223b;
+  animation: fadeIn 1s;
+}
+
+h1 {
+  color: #3a0ca3;
+  text-align: center;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+  animation: slideDown 0.7s;
+}
+
+form, .content {
+  background: #fff;
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px rgba(58,12,163,0.08);
+  animation: fadeInUp 0.8s;
+}
+
+label {
+  font-weight: 500;
+  color: #3a0ca3;
+}
+
+input[type="text"], input[type="submit"], input, select {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus, input:focus {
+  border: 1.5px solid #3a0ca3;
+  outline: none;
+}
+
+input[type="submit"] {
+  background: linear-gradient(90deg, #3a0ca3 60%, #4361ee 100%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(90deg, #4361ee 60%, #3a0ca3 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+a {
+  color: #4361ee;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #3a0ca3;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f1f3f8;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  box-shadow: 0 2px 8px rgba(67,97,238,0.04);
+  animation: fadeInUp 0.7s;
+}
+
+hr {
+  border: none;
+  border-top: 1.5px solid #e0e7ff;
+  margin: 2rem 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
