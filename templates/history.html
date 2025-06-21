@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>History</title></head>
+<body>
+  <h1>Past Learned Lines</h1>
+  <ul>
+  {% for line in lines %}
+    <li>
+      {{ line.japanese }} ({{ line.romaji or 'No romaji' }}) – {{ line.translation }}
+    </li>
+  {% endfor %}
+  </ul>
+  <a href="/">Back</a>
+</body>
+</html>
